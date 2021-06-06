@@ -1,9 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer')
-
+const genMarkdown = require('./utils/generateMarkdown.js')
 // TODO: Create an array of questions for user input
-const questions = ['Enter title of Application:', 'Enter a description:', 'Enter Table of Contents:', 'Enter installation:', 'Enter Usage:', 'Enter contributors:', 'Enter Tests','Enter license:', 'Enter GitHub username:', 'Enter email:'];
+const questions = ['Enter title of Application:', 'Enter a description:', 'Enter installation instructions:', 'Enter usage information:', 'Enter contribution guidelines:', 'Enter test instructions:','Enter license:', 'Enter GitHub username:', 'Enter email:'];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
@@ -27,50 +27,45 @@ function init() {
             },
             {
                 type: 'input',
-                name: 'table',
+                name: 'installation',
                 message: questions[2],
             },
             {
                 type: 'input',
-                name: 'installation',
+                name: 'usage',
                 message: questions[3],
             },
             {
                 type: 'input',
-                name: 'usage',
+                name: 'contributing',
                 message: questions[4],
             },
             {
                 type: 'input',
-                name: 'contributers',
-                message: questions[5],
-            },
-            {
-                type: 'input',
                 name: 'test',
-                message: questions[6],
+                message: questions[5],
             },
             {
                 type: 'list',
                 name: 'license',
-                message: questions[7],
+                message: questions[6],
                 choices:['MIT', 'NPM', 'other'],
             },
             {
                 type: 'input',
                 name: 'github',
-                message: questions[8],
+                message: questions[7],
                 
             },
             {
                 type: 'input',
                 name: 'email',
-                message: questions[9],
+                message: questions[8],
             },
     ])
     .then((data) => {
-        const userInput = data
-        console.log(userInput)
+        const fileText = genMarkdown.generateMarkdown(data)
+        writeToFile(`${data.title}ReadMe.md`, fileText)
     })
 }
 
