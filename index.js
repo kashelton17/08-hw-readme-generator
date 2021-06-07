@@ -67,7 +67,7 @@ function init() {
     .then((data) => {
         console.log('Responses:',data)
         const fileText = genMarkdown.generateMarkdown(data)
-        writeToFile(`${data.title}ReadMe.md`, fileText)
+        writeToFile(`${data.title}README.md`, fileText)
     })
 }
 
