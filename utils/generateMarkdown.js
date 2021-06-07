@@ -48,7 +48,13 @@ function generateMarkdown(data) {
   const licensePart = renderLicenseSection(data.license)
   return `# ${data.title} \n ${badge}
 \n \n ## Description \n ${data.description} 
-\n \n ## Table of Contents \n[Installation](#installation) \n [Usage](#usage) \n [License](#license) \n [Contributing](#contributing) \n [Tests](#Tests) \n [Questions](#questions)
+\n \n ## Table of Contents 
+\n * [Installation](#installation) 
+\n * [Usage](#usage) 
+\n * [License](#license) 
+\n * [Contributing](#contributing) 
+\n * [Tests](#Tests) 
+\n * [Questions](#questions)
 \n \n ## Installation \n${data.installation}
 \n \n ## Usage \n ${data.usage}
 \n \n ## License \n ${licensePart}
