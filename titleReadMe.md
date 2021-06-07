@@ -1,5 +1,5 @@
-# Title 
- [![License: APACHE 2.0](https://img.shields.io/badge/License-APACHE 2.0-blue.svg)]
+# title 
+ [![License: GPL 3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
  
  ## Description 
@@ -16,7 +16,7 @@
 
  
  ## Installation 
-install the app
+installation instructions
 
  
  ## Usage 
@@ -24,18 +24,17 @@ install the app
 
  
  ## License 
- ## License information 
- This application uses a license from APACHE 2.0 
- Link: undefined
+ This application uses a license from GPL 3.0 
+ Link: [View GPL 3.0 License](https://www.gnu.org/licenses/gpl-3.0)
 
  
  ## Contributing 
- guidelines stuff
+ guidlines
 
  
  ## Tests 
- instructions
+ test instructiones
 
  
  ## Questions 
- Please find me on GitHub, [github.com/kashelton17](https://github.com/kashelton17), or by email kashelton17@gmail.com for any questions
+ Please find me on GitHub, [github.com/kashelton17@gmails.com](https://github.com/kashelton17@gmails.com), or by email kashetlon172lkasjdf for any questions

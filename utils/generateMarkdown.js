@@ -19,7 +19,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license === 'MIT') {
     return 'https://opensource.org/licenses/MIT'
-  } else if (license === ''){
+  } else if (license === 'None'){
     return ''
   } else if (license === 'Apache 2.0'){
     return `[View Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)`
@@ -35,7 +35,11 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   const link = renderLicenseLink(license)
   const licenseSection = `This application uses a license from ${license} \n Link: ${link}`
-  return licenseSection
+  if (license === 'None'){
+    return ''
+  } else {
+    return licenseSection
+  }
 }
 
 // TODO: Create a function to generate markdown for README

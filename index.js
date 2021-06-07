@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const { Console } = require('console');
 const fs = require('fs')
 const inquirer = require('inquirer')
 const genMarkdown = require('./utils/generateMarkdown.js')
@@ -8,7 +9,7 @@ const questions = ['Enter title of Application:', 'Enter a description:', 'Enter
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log('README.md successfully written!'))
+    err ? console.log(err) : console.log(`${fileName} successfully written!`))
 }
 
 // TODO: Create a function to initialize app
@@ -64,6 +65,7 @@ function init() {
             },
     ])
     .then((data) => {
+        console.log('Responses:',data)
         const fileText = genMarkdown.generateMarkdown(data)
         writeToFile(`${data.title}ReadMe.md`, fileText)
     })
