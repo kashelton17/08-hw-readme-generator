@@ -60,7 +60,9 @@ function generateMarkdown(data) {
 \n \n ## License \n ${licensePart}
 \n \n ## Contributing \n ${data.contributing}
 \n \n ## Tests \n ${data.test}
-\n \n ## Questions \n Please find me on GitHub, [github.com/${data.github}](https://github.com/${data.github}), or by email ${data.email} for any questions
+\n \n ## Questions \n Please find me on GitHub or email me with further questiosn:
+\n * [GitHub: ${data.github}](https://github.com/${data.github})
+\n * Email: ${data.email} 
 `;
 }
 
