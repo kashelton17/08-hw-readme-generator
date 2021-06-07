@@ -9,7 +9,7 @@ const questions = ['Enter title of Application:', 'Enter a description:', 'Enter
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log(`${fileName} successfully written!`))
+    err ? console.log('Error message:',err) : console.log(`${fileName} successfully written!`))
 }
 
 // TODO: Create a function to initialize app
