@@ -34,7 +34,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   const link = renderLicenseLink(license)
-  const licenseSection = `This application uses a license from ${license} \n Link: ${link}`
+  const licenseSection = `This application uses a license from ${license} 
+  \n * Link: ${link}`
   if (license === 'None'){
     return ''
   } else {
@@ -61,7 +62,7 @@ function generateMarkdown(data) {
 \n \n ## Contributing \n ${data.contributing}
 \n \n ## Tests \n ${data.test}
 \n \n ## Questions \n Please find me on GitHub or email me with further questions:
-\n * [GitHub: ${data.github}](https://github.com/${data.github})
+\n * GitHub: [${data.github}](https://github.com/${data.github})
 \n * Email: ${data.email} 
 `;
 }
